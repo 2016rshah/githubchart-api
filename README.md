@@ -12,6 +12,8 @@ and it'll become:
 
 ###See also 
 The [github repo](https://github.com/2016rshah/githubchart-api)
+
 The [actual site](http://ghchart.rshah.io)
+
 This [ruby gem](https://github.com/akerl/githubchart)
 
