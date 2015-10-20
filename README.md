@@ -6,10 +6,12 @@ Just put this into your HTML:
 
     <img src="http://ghchart.rshah.io/2016rshah.svg" alt="2016rshah's Github chart" />
 
-That will become 
+and it'll become:
 
 ![2016rshah's Github chart](http://ghchart.rshah.io/2016rshah.svg)
 
-Also see the [ruby gem](https://github.com/akerl/githubchart)
-
+###See also 
+The [github repo](https://github.com/2016rshah/githubchart-api)
+The [actual site](http://ghchart.rshah.io)
+This [ruby gem](https://github.com/akerl/githubchart)
 
