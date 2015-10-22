@@ -2,11 +2,11 @@
 
 Make this:
 
-![2016rshah's Github chart](http://ghchart.rshah.io/2016rshah.svg)
+![2016rshah's Github chart](http://ghchart.rshah.io/2016rshah)
 
 with this:
 
-    <img src="http://ghchart.rshah.io/2016rshah.svg" alt="2016rshah's Github chart" />
+    <img src="http://ghchart.rshah.io/2016rshah" alt="2016rshah's Github chart" />
 
 Of course you can replace `2016rshah` with your own github username.
 

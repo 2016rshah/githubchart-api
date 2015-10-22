@@ -9,7 +9,9 @@ end
 get '/:username' do
     headers 'Content-Type' => "image/svg+xml"
 
-    svg = GithubChart.new(user: params[:username]).svg
+    username = params[:username].chomp('.svg') #Chomp off the .svg extension to be backwards compatible
+
+    svg = GithubChart.new(user: username).svg
 
     stream do |out|
       out << svg
