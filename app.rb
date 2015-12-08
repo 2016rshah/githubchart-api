@@ -26,9 +26,15 @@ get '/:base/:username' do
     headers 'Content-Type' => "image/svg+xml"
     username = params[:username].chomp('.svg')
 
-    base_color = '#'+params[:base]
-    scheme = ['#EEEEEE', lighten_color(base_color, 0.3), lighten_color(base_color, 0.2), base_color, darken_color(base_color, 0.8)]
-    
+    #Makes API backwards compatible
+    if(params[:base] == "teal" || params[:base] == "halloween" || params[:base] == "default")
+        scheme = COLOR_SCHEMES[params[:base].to_sym]
+    else
+        #this case will be executed a majority of the time
+        base_color = '#'+params[:base]
+        scheme = ['#EEEEEE', lighten_color(base_color, 0.3), lighten_color(base_color, 0.2), base_color, darken_color(base_color, 0.8)]
+    end
+
     svg = GithubChart.new(user: username, colors: scheme).svg
     stream do |out|
       out << svg
