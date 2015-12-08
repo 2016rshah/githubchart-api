@@ -1,11 +1,12 @@
 require 'sinatra'
 require 'githubchart'
 
-COLOR_SCHEMES = {
-    default: ['#eeeeee', '#d6e685', '#8cc665', '#44a340', '#1e6823'],
-    halloween: ['#EEEEEE', '#FFEE4A', '#FFC501', '#FE9600', '#03001C'],
-    teal: ['#EEEEEE', "#7FFFD4", "#76EEC6", "#66CDAA", "#458B74"]
-}
+require './color.rb'
+
+# Examples of nice colors to try out to start with:
+# blue: 409ba5
+# red: 720100
+# green: 44a340
 
 get '/' do
     send_file File.join(settings.public_folder, 'index.html')
@@ -21,12 +22,13 @@ get '/:username' do
     end
 end
 
-get '/:scheme/:username' do
-	#example: ghchart.rshah.io/teal/2016rshah
-	#if scheme is not recognized, it will bounce back to the default color scheme
-	headers 'Content-Type' => "image/svg+xml"
+get '/:base/:username' do
+    headers 'Content-Type' => "image/svg+xml"
     username = params[:username].chomp('.svg')
-    scheme = COLOR_SCHEMES[params[:scheme].to_sym] #must correspond to the color schemes specified above
+
+    base_color = '#'+params[:base]
+    scheme = ['#EEEEEE', lighten_color(base_color, 0.3), lighten_color(base_color, 0.2), base_color, darken_color(base_color, 0.8)]
+    
     svg = GithubChart.new(user: username, colors: scheme).svg
     stream do |out|
       out << svg
