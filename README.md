@@ -18,13 +18,14 @@ For example, I personally think it would really spiff up a [personal website](ht
 
 #Color Schemes
 
-We also support custom color schemes! You can use any of the [current color schemes](https://github.com/2016rshah/githubchart-api/blob/master/app.rb#L4) to make things like this:
+We also support custom color schemes! You can provide any base color and we will make shades for the chart. 
 
-    <img src="http://ghchart.rshah.org/teal/2016rshah" alt="2016rshah's Teal Github Chart"
+For example if you want a blue-themed chart that is based around the hex color `#409ba5`, you can visit the following route:
 
-![2016rshah's Teal Github Chart](http://ghchart.rshah.org/teal/2016rshah)
+    <img src="http://ghchart.rshah.org/409ba5/2016rshah" alt="2016rshah's Blue Github Chart" />
 
-If you would like to add your own custom color scheme, just send in a PR to add to the pre-set color schemes. 
+![2016rshah's Blue Github Chart](http://ghchart.rshah.org/409ba5/2016rshah)
+
 
 #Contributing
 
