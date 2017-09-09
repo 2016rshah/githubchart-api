@@ -15,6 +15,8 @@ end
 get '/:username' do
 	#default color scheme used by github
     headers 'Content-Type' => "image/svg+xml"
+    headers 'Cache-Control' => "max-age=#{60*60*24}"
+
     username = params[:username].chomp('.svg') #Chomp off the .svg extension to be backwards compatible
     svg = GithubChart.new(user: username).svg
     stream do |out|
@@ -23,7 +25,9 @@ get '/:username' do
 end
 
 get '/:base/:username' do
+    headers 'Cache-Control' => "max-age=#{60*60*24}"
     headers 'Content-Type' => "image/svg+xml"
+
     username = params[:username].chomp('.svg')
 
     #Makes API backwards compatible
