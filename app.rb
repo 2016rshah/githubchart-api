@@ -18,7 +18,7 @@ get '/:username' do
     headers 'Cache-Control' => "max-age=#{60*60*24}"
 
     username = params[:username].chomp('.svg') #Chomp off the .svg extension to be backwards compatible
-    svg = GithubChart.new(user: username).svg
+    svg = GithubChart.new(user: username).render('svg')
     stream do |out|
       out << svg
     end
@@ -39,7 +39,7 @@ get '/:base/:username' do
         scheme = ['#EEEEEE', lighten_color(base_color, 0.3), lighten_color(base_color, 0.2), base_color, darken_color(base_color, 0.8)]
     end
 
-    svg = GithubChart.new(user: username, colors: scheme).svg
+    svg = GithubChart.new(user: username, colors: scheme).render('svg')
     stream do |out|
       out << svg
     end
