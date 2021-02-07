@@ -11,8 +11,8 @@ GEM
     mini_portile2 (2.4.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    rack (1.6.4)
-    rack-protection (1.5.3)
+    rack (1.6.13)
+    rack-protection (1.5.5)
       rack
     sinatra (1.4.6)
       rack (~> 1.4)
