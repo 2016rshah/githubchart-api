@@ -18,11 +18,24 @@ For example, I personally think it would really spiff up a [personal website](ht
 
 # Color Schemes
 
-We also support custom color schemes! You can provide any base color and we will make shades for the chart. Just visit `https://ghchart.rshah.org/<HEX-COLOR>/2016rshah` and replace `<HEX-COLOR>` with your hex color code, not including the leading hashtag. For example if you want a blue-themed chart that is based around the hex color `#409ba5`, you can visit the following route:
+We also support custom color schemes! You can provide any base color and we will make shades for the chart. 
 
-    <img src="https://ghchart.rshah.org/409ba5/2016rshah" alt="2016rshah's Blue Github Chart" />
+```
+https://ghchart.rshah.org/<BASE-COLOR>/2016rshah 
+```
+Replace ```BASE-COLOR``` with a hex string eg: ```ff0000```
 
-![2016rshah's Blue Github Chart](https://ghchart.rshah.org/409ba5/2016rshah)
+```
+https://ghchart.rshah.org/<BASE-COLOR>/<BG-COLOR>/2016rshah
+```
+Replace ```BASE-COLOR``` & ```BG-COLOR``` with a hex string eg: ```ff0000```
+
+
+<img src="https://ghchart.rshah.org/409ba5/2016rshah" alt="2016rshah's Github chart" />
+
+<img src="https://ghchart.rshah.org/409ba5/222222/2016rshah" alt="2016rshah's Github chart" />
+
+
 
 
 # Contributing
