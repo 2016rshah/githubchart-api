@@ -2,15 +2,19 @@ GEM
   remote: http://rubygems.org/
   specs:
     basiccache (1.0.0)
-    githubchart (3.3.1)
-      githubstats (~> 3.2.0)
+    githubchart (3.4.0)
+      githubstats (~> 3.3.0)
+      matrix (~> 0.4.2)
       svgplot (~> 1.0.0)
-    githubstats (3.2.0)
+    githubstats (3.3.0)
       basiccache (~> 1.0.0)
-      nokogiri (~> 1.10.8)
-    mini_portile2 (2.4.0)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+      nokogiri (~> 1.13.10)
+    matrix (0.4.2)
+    mini_portile2 (2.8.1)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
+    racc (1.6.2)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -25,7 +29,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  githubchart (>= 3.3.1)
+  githubchart (>= 3.4.0)
   sinatra
 
 RUBY VERSION
