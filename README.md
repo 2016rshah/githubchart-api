@@ -29,6 +29,8 @@ We also support custom color schemes! You can provide any base color and we will
 
 If you see anything that can be improved send in an issue/PR. 
 
+To get the code up and running, make sure ruby, etc. is properly installed, then run `bundle install`, then run `ruby app.rb` and visit `localhost:4567` in your browser. 
+
 # See also 
 The [github repo](https://github.com/2016rshah/githubchart-api)
 
