@@ -15,7 +15,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     racc (1.6.2)
-    rack (1.6.4)
+    rack (1.6.13)
     rack-protection (1.5.3)
       rack
     sinatra (1.4.6)
