@@ -1,4 +1,4 @@
 source 'http://rubygems.org'
-ruby "2.6.6"
+ruby '>= 2.6.0'
 gem 'sinatra'
-gem 'githubchart', '>= 3.4.0'
+gem 'githubchart', '>= 4.0.0'
