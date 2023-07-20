@@ -35,7 +35,7 @@ DEPENDENCIES
   webrick
 
 RUBY VERSION
-   ruby 2.6.6p146
+   ruby 3.1.2p20
 
 BUNDLED WITH
    1.17.3
