@@ -1,10 +1,11 @@
 COLOR_SCHEMES = {
-    default: ['#eeeeee', '#d6e685', '#8cc665', '#44a340', '#1e6823'],
-    halloween: ['#EEEEEE', '#FFEE4A', '#FFC501', '#FE9600', '#03001C'],
-    teal: ['#EEEEEE', "#7FFFD4", "#76EEC6", "#66CDAA", "#458B74"]
+    light: ['#eeeeee', '#d6e685', '#8cc665', '#44a340', '#1e6823'],
+    dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+    halloween: ['#eeeeee', '#ffee4a', '#ffc501', '#fe9600', '#03001c'],
+    teal: ['#eeeeee', "#7fffd4", "#76eec6", "#66cdaa", "#458b74"],
 }
 
-#http://www.redguava.com.au/2011/10/lighten-or-darken-a-hexadecimal-color-in-ruby-on-rails/
+# http://www.redguava.com.au/2011/10/lighten-or-darken-a-hexadecimal-color-in-ruby-on-rails/
 
 # Amount should be a decimal between 0 and 1. Lower means darker
 def darken_color(hex_color, amount=0.4)

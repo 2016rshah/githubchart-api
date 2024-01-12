@@ -31,12 +31,10 @@ get '/:base/:username' do
     username = params[:username].chomp('.svg')
 
     #Makes API backwards compatible
-    if(params[:base] == "teal" || params[:base] == "halloween" || params[:base] == "default")
+    if(params[:base] == "teal" || params[:base] == "halloween" || params[:base] == "dark")
         scheme = COLOR_SCHEMES[params[:base].to_sym]
     else
-        #this case will be executed a majority of the time
-        base_color = '#'+params[:base]
-        scheme = ['#EEEEEE', lighten_color(base_color, 0.3), lighten_color(base_color, 0.2), base_color, darken_color(base_color, 0.8)]
+        scheme = COLOR_SCHEMES["light".to_sym]
     end
 
     svg = GithubChart.new(user: username, colors: scheme).render('svg')
